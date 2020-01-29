@@ -46,6 +46,10 @@
     if (winningCombination) {
       winningPlayer = getWinningPlayer();
     }
+    if (!board.includes(" ") && !winningPlayer) {
+      // no more moves
+      winningPlayer = "TIE";
+    }
   }
 
   function handleClick(i) {
